@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PhotoActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_photo_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/lv_photo_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/photo_top_bar_height"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/iv_photo_back"
+            android:layout_width="@dimen/photo_top_bar_height"
+            android:layout_height="@dimen/photo_top_bar_height"
+            android:src="@drawable/back"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_photo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试标题"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/lv_photo_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+        
+        <LinearLayout
+            android:id="@+id/lv_photo_menu_identify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            
+            <ImageView
+                android:layout_width="@dimen/photo_menu_item_weight"
+                android:layout_height="@dimen/photo_menu_item_weight"
+                android:src="@drawable/identify"
+                android:layout_gravity="top|center"
+                android:padding="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="识别"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="5dp"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lv_photo_menu_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/photo_menu_item_weight"
+                android:layout_height="@dimen/photo_menu_item_weight"
+                android:src="@drawable/share"
+                android:layout_gravity="top|center"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rv_photo_menu_collect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_photo_collect"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_collect"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lv_photo_menu_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/photo_menu_item_weight"
+                android:layout_height="@dimen/photo_menu_item_weight"
+                android:src="@drawable/delete"
+                android:layout_gravity="top|center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lv_photo_menu_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/photo_menu_item_weight"
+                android:layout_height="@dimen/photo_menu_item_weight"
+                android:src="@drawable/detail"
+                android:layout_gravity="top|center"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详情"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>

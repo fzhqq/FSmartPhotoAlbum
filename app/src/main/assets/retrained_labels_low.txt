@@ -1,0 +1,6 @@
+animal
+anime
+building
+people
+plant
+word
